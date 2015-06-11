@@ -1,0 +1,33 @@
+
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/Gray</item>
+        <item name="colorPrimaryDark">@color/Black</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="actionMenuTextColor">@color/White</item>
+
+        <item name="android:textColorSecondary">@color/White</item>
+        <item name="android:textColorPrimary">@color/White</item>
+
+        <item name="colorControlNormal">@color/Black</item>
+        <item name="colorControlActivated">@color/Black</item>
+        <item name="colorControlHighlight">@color/Black</item>
+
+        <item name="android:colorButtonNormal">@color/Black</item>
+
+
+
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+</resources>

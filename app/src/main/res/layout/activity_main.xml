@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/sensorSelectorLabel"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor type"
+        android:layout_alignParentTop="true"/>
+
+    <RadioGroup android:id="@+id/sensorSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sensorSelectorLabel">
+
+        <RadioButton android:id="@+id/accelerometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TYPE_ACCELEROMETER"
+            android:checked="true"
+            android:onClick="onSensorSelectorClick" />
+
+        <RadioButton android:id="@+id/linearAcceleration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TYPE_LINEAR_ACCELERATION"
+            android:checked="false"
+            android:onClick="onSensorSelectorClick" />
+    </RadioGroup>
+
+    <TextView android:id="@+id/optionsLabel"
+        android:layout_width = "match_parent"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:layout_below="@id/sensorSelector" />
+
+
+    <CheckBox android:id="@+id/highPassFilterCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enable high pass filter"
+        android:checked="true"
+        android:layout_below="@id/optionsLabel"
+        android:onClick="onHighPassFilterCheckBoxClicked" />
+
+    <ToggleButton android:id="@+id/readAccelerationDataToggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_alignParentBottom="true"
+        android:textOn="reading sensor data"
+        android:textOff="start reading sensor data"
+        android:onClick="onReadAccelerationDataToggleButtonClicked" />
+
+    <com.androidplot.xy.XYPlot android:id="@+id/XYPlot"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        title="Acceleration Plot"
+        android:layout_below="@id/highPassFilterCheckBox"
+        android:layout_above="@id/readAccelerationDataToggleButton"/>
+
+</RelativeLayout>
